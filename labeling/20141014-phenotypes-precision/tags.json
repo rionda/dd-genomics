@@ -1,6 +1,7 @@
 [
  {
-  "is_correct": true
+  "is_correct": false,
+  "mention taken from a reference": true
  },
  {
   "is_correct": true
@@ -19,7 +20,15 @@
  },
  {
   "looks fine by quick google search": true,
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
   "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
  },
  {
   "is_correct": true
@@ -29,5 +38,311 @@
  },
  {
   "is_correct": true
+ },
+ {
+  "is_correct": true,
+  "Ok - but with doubt. the term is way too general...": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true,
+  "looks like a title": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "incorrect - I checked the publication": true,
+  "words are too far from each other": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too general term (e.g., high level in DAG)": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true,
+  "Correct - I checked the publication": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true,
+  "looks like a title": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true,
+  "looks like a title": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too general term (e.g., high level in DAG)": true,
+  "words are too far from each other": true
+ },
+ {
+  "is_correct": false,
+  "mention taken from a reference": true
+ },
+ {
+  "is_correct": false,
+  "words are too far from each other": true
  }
 ]
