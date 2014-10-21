@@ -1,1 +1,328 @@
-null
+[
+ {
+  "is_correct": true
+ },
+ {
+  "disamb. keyword: amino-acid": true,
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "in ncbi: MBP=myelin basic protein": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too few characters": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "there are many HSP genes - so more specific mention is required": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true,
+  "in ncbi: MBP=myelin basic protein": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true,
+  "disamb. kewords: C-termial": true,
+  "disamb. keyword: amino-acid": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "probably true but entity is too general": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true,
+  "looks like a reference title": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true,
+  "looks like a reference title": true
+ },
+ {
+  "is_correct": false,
+  "too few characters": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too few characters": true
+ },
+ {
+  "looks like a reference title": true,
+  "is_correct": false
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "looks like a reference title": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "there are many GPCRs genes": true
+ },
+ {
+  "synonym seem questionable (i.e., controversy between ncbi & hugo)": true,
+  "is_correct": false
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too few characters": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too few characters": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "CFD\tADN\tcomplement factor D (adipsin)": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "too few characters": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "in ncbi: MBP=myelin basic protein": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "looks like a reference title": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "there are many HSP genes - so more specific mention is required": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "unclear definition": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "there are many HSP genes - so more specific mention is required": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": false,
+  "unclear definition": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ },
+ {
+  "is_correct": true
+ }
+]
