@@ -62,8 +62,10 @@ CREATE TABLE acronyms (
 	acronym text,
 	-- definitions
 	definitions text[],
-	-- is_correct
-	is_correct boolean
+	-- is_correct (for genes)
+	is_correct boolean,
+	-- hpoterm_id
+	hpoterm_id text
 ) DISTRIBUTED BY (doc_id);
 
 -- GeneRifs mentions

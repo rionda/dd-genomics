@@ -15,12 +15,5 @@
 	for our case? You know the literature and your community, I don't. Shall we
 	investigate it further to increase coverage? Note the increase in HPOterm
 	coverage may lead to improved coverage of G/P relation
-* Investigate the use of additional inference rules to better model the
-	distribution of possible worlds. For example, if the r.v. associated to a
-	G/P relation mention is True, then so must be the two random variables
-	associated to the gene and phenotype mention constituting the relation
-	mention. On the other hand, if one of the two mentions is false, so must be
-	the relation mention (we use this for supervision).
-* What's the status of Amir's installation / confidence with the system ?
-* I am a little confused about what I am supposed to do next. 
+* Add inference rules to avoid that one 
 
