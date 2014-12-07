@@ -15,8 +15,8 @@ def extract(sentence):
     # First method: Look for a sentence that starts with "Abbreviations"
     if len(sentence.words) > 2 and \
             sentence.words[0].word.casefold() == "abbreviations" and \
-            (sentence.words[1].word.casefold() == ":" or 
-                    sentence.words[1].word.casefold() == "used"):
+            (sentence.words[1].word.casefold() == ":" or
+                sentence.words[1].word.casefold() == "used"):
         words = [x.word for x in sentence.words]
         index = 2
         while index < len(words):
@@ -48,10 +48,6 @@ def extract(sentence):
                 else:
                     definition_end = len(words)
             definition = " ".join(words[definition_start:definition_end])
-            if words[index] not in merged_genes_dict or \
-                    words[index] in inverted_long_names:
-                index = definition_end + 1
-                continue
             # If we didn't find a definition, give up
             if definition.strip() == "":
                 index = definition_end + 1
@@ -67,14 +63,12 @@ def extract(sentence):
         # Skip first and last word of sentence, to allow for "(" and ")".
         for word in sentence.words[1:-1]:
             acronym = None
-            # Look for definition only if 
-            # - this word is in the genes dictionary AND
-            # - is uppercase AND
+            # Look for definition only if
+            # - this word is uppercase AND
             # - it only contains letters AND
             # - it has length at least 2  AND
-            # - it comes between "(" and ")" or "(" and ";" # or "(" # and "," 
-            if word.word in merged_genes_dict and \
-                    word.word not in inverted_long_names and \
+            # - it comes between "(" and ")" or "(" and ";" # or "(" # and ","
+            if word.word not in inverted_long_names and \
                     word.word.isupper() and word.word.isalpha() and \
                     len(word.word) >= 2 and \
                     ((sentence.words[word.in_sent_idx - 1].word == "(" and
@@ -108,9 +102,11 @@ def extract(sentence):
     return acronyms
 
 
-# Load the genes dictionary
+# Load the dictionaries we use
 merged_genes_dict = load_dict("merged_genes")
 inverted_long_names = load_dict("inverted_long_names")
+stopwords_dict = load_dict("stopwords")
+hponame_sets_to_ids = load_dict("hponame_sets_to_ids")
 
 if __name__ == "__main__":
     # Process the input
@@ -119,18 +115,18 @@ if __name__ == "__main__":
             # Parse the TSV line
             line_dict = get_dict_from_TSVline(
                 line,
-                ["doc_id", "sent_ids", "wordidxss", "wordss", "posess", 
+                ["doc_id", "sent_ids", "wordidxss", "wordss", "posess",
                     "nerss", "lemmass", "dep_pathss", "dep_parentss",
                     "bounding_boxess"],
-                [no_op, lambda x: TSVstring2list(x, int), 
-                    lambda x: TSVstring2list(x,sep='!~!'), 
-                    lambda x: TSVstring2list(x,sep='!~!'), 
-                    lambda x: TSVstring2list(x,sep='!~!'),
-                    lambda x: TSVstring2list(x,sep='!~!'),
-                    lambda x: TSVstring2list(x,sep='!~!'), 
-                    lambda x: TSVstring2list(x,sep='!~!'),
-                    lambda x: TSVstring2list(x,sep='!~!'),
-                    lambda x: TSVstring2list(x,sep='!~!')])
+                [no_op, lambda x: TSVstring2list(x, int),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!'),
+                    lambda x: TSVstring2list(x, sep='!~!')])
             # Acronyms defined in the document
             acronyms = dict()
             for idx in range(len(line_dict["sent_ids"])):
@@ -141,8 +137,9 @@ if __name__ == "__main__":
                 lemmas = TSVstring2list(line_dict["lemmass"][idx])
                 dep_paths = TSVstring2list(line_dict["dep_pathss"][idx])
                 dep_parents = TSVstring2list(line_dict["dep_parentss"][idx],
-                        int)
-                bounding_boxes = TSVstring2list(line_dict["bounding_boxess"][idx])
+                                             int)
+                bounding_boxes = TSVstring2list(
+                    line_dict["bounding_boxess"][idx])
                 # Create the Sentence object
                 sentence = Sentence(
                     line_dict["doc_id"], line_dict["sent_ids"][idx], wordidxs,
@@ -156,13 +153,14 @@ if __name__ == "__main__":
                     acronyms[acronym["acronym"]].add(acronym["definition"])
             # Classify the acronyms
             for acronym in acronyms:
+                # Genes classification
                 contains_kw = False
-                is_correct = None
+                gene_is_correct = None
                 for definition in acronyms[acronym]:
                     # If the definition is in the gene dictionary, supervise as
                     # correct
                     if definition in merged_genes_dict:
-                        is_correct = True
+                        gene_is_correct = True
                         break
                     else:
                         # Check if the definition contains some keywords that
@@ -185,13 +183,24 @@ if __name__ == "__main__":
                             contains_kw = True
                 # If no significant keyword in any definition, supervise as not
                 # correct
-                if not contains_kw and not is_correct:
-                    is_correct = False
-                is_correct_str = "\\N"
-                if is_correct is not None:
-                    is_correct_str = is_correct.__repr__()
+                if not contains_kw and not gene_is_correct:
+                    gene_is_correct = False
+                gene_is_correct_str = "\\N"
+                if gene_is_correct is not None:
+                    gene_is_correct_str = gene_is_correct.__repr__()
+                # HPOTerm classification
+                hpoterm_id = "\\N"
+                for definition in acronyms[acronym]:
+                    tokens = definition.split()
+                    def_words = set()
+                    for token in tokens:
+                        if token not in stopwords_dict and token != ",":
+                            def_words.add(token.casefold())
+                    def_words = frozenset(def_words)
+                    if def_words in hponame_sets_to_ids:
+                        hpoterm_id = hponame_sets_to_ids[def_words]
+                        break
                 print("\t".join(
                     (line_dict["doc_id"], acronym,
-                    list2TSVarray(list(acronyms[acronym]), quote=True),
-                    is_correct_str)))
-
+                     list2TSVarray(list(acronyms[acronym]), quote=True),
+                     gene_is_correct_str, hpoterm_id)))

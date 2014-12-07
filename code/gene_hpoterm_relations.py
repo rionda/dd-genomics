@@ -7,8 +7,44 @@ from dstruct.Mention import Mention
 from dstruct.Sentence import Sentence
 from dstruct.Relation import Relation
 from helper.dictionaries import load_dict
-from helper.easierlife import get_dict_from_TSVline, no_op, TSVstring2bool, \
-    TSVstring2list
+from helper.easierlife import get_dict_from_TSVline, no_op, TSVstring2list
+
+
+# Supervise
+def supervise(relation, gene_mention, hpoterm_mention, sentence):
+    # One of the two mentions is labelled as False
+    if gene_mention.is_correct is False and \
+            hpoterm_mention.is_correct is not False:
+        relation.is_correct = False
+        relation.type = "GENEHPOTERM_SUP_F_G"
+    elif hpoterm_mention.is_correct is False and \
+            gene_mention.is_correct is not False:
+        relation.is_correct = False
+        relation.type = "GENEHPOTERM_SUP_F_H"
+    elif hpoterm_mention.is_correct is False and \
+            gene_mention.is_correct is False:
+        relation.is_correct = False
+        relation.type = "GENEHPOTERM_SUP_F_GH"
+    # If the mentions are too far away, label the relation as false
+    elif relation.ws_len > 10:
+        relation.is_correct = False
+        relation.type = "GENEHPOTERM_SUP_F_WSLEN"
+    # Present in the existing HPO mapping
+    else:
+        in_mapping = False
+        hpo_entity_id = hpoterm_mention.entity.split("|")[0]
+        if frozenset([gene_mention.words[0].word, hpo_entity_id]) in \
+                genehpoterms_dict:
+            in_mapping = True
+        else:
+            for gene in gene_mention.entity.split("|"):
+                if frozenset([gene, hpo_entity_id]) in \
+                        genehpoterms_dict:
+                    in_mapping = True
+                    break
+        if in_mapping:
+            relation.is_correct = True
+            relation.type = "GENEHPOTERM_SUP_MAP"
 
 
 # Add features
@@ -22,7 +58,6 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
     start = limits[0]
     betw_start = limits[1]
     betw_end = limits[2]
-    end = limits[3]
     # If the gene comes first, we do not prefix, otherwise we do.
     if start == gene_start:
         inv = ""
@@ -46,16 +81,8 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
     # is more correct (in my opinion) to look all the words, as in the
     # dependency path there could be words that are close to both mentions but
     # not between them
-    #for i in range(betw_start+1, betw_end):
+    # for i in range(betw_start+1, betw_end):
     for i in range(len(sentence.words)):
-        if "," not in sentence.words[i].lemma:
-            ws.append(sentence.words[i].lemma)
-            # Feature for separation between entities
-            # TODO Think about merging these?
-            if "while" == sentence.words[i].lemma:
-                relation.add_feature("SEP_BY_[while]")
-            if "whereas" == sentence.words[i].lemma:
-                relation.add_feature("SEP_BY_[whereas]")
         # The filtering of the brackets and commas is from Emily's code. I'm
         # not sure it is actually needed, but it won't hurt.
         if re.search('^VB[A-Z]*', sentence.words[i].pos) and \
@@ -91,33 +118,45 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
     else:
         for verb in verbs_between:
             relation.add_feature(inv + "VERB_[%s]" % verb)
-    if mini_hpo == mini_gene and mini_gene != None and len(minp_gene) < 50: # and "," not in minw_gene:
+    if mini_hpo == mini_gene and mini_gene is not None and \
+            len(minp_gene) < 50:  # and "," not in minw_gene:
         # feature = inv + 'MIN_VERB_[' + minw_gene + ']' + minp_gene
         # features.append(feature)
         feature = inv + 'MIN_VERB_[' + minw_gene + ']'
         relation.add_feature(feature)
     else:
-        if mini_gene != None:
+        if mini_gene is not None:
             # feature = 'MIN_VERB_GENE_[' + minw_gene + ']' + minp_gene
             # relation.add_feature(feature)
             feature = inv + 'MIN_VERB_GENE_[' + minw_gene + ']'
             relation.add_feature(feature)
-        if mini_hpo != None:
+        if mini_hpo is not None:
             # feature = 'MIN_VERB_HPO_[' + minw_hpo + ']' + minp_hpo)
             # relation.add_feature(feature)
             feature = inv + 'MIN_VERB_HPO_[' + minw_hpo + ']'
             relation.add_feature(feature)
     # Shortest dependency path between the two mentions
-    relation.add_feature(inv + "DEP_PATH_[" + sentence.dep_path(gene_mention,
-        hpoterm_mention) + "]")
+    relation.add_feature(
+        inv + "DEP_PATH_[" + sentence.dep_path(gene_mention, hpoterm_mention) +
+        "]")
     # The sequence of lemmas between the two mentions
+    for i in range(betw_start+1, betw_end):
+        if "," not in sentence.words[i].lemma:
+            ws.append(sentence.words[i].lemma)
+            # Feature for separation between entities
+            # TODO Think about merging these?
+            if "while" == sentence.words[i].lemma:
+                relation.add_feature("SEP_BY_[while]")
+            if "whereas" == sentence.words[i].lemma:
+                relation.add_feature("SEP_BY_[whereas]")
     if len(ws) < 7 and len(ws) > 0 and "{" not in ws and "}" not in ws and \
             "\"" not in ws and "/" not in ws and "\\" not in ws and \
             "," not in ws and \
             " ".join(ws) not in ["_ and _", "and", "or",  "_ or _"]:
             relation.add_feature(inv + "WORD_SEQ_[%s]" % " ".join(ws))
-    # Number of words between the mentions
-    relation.add_feature(inv + "WORD_SEQ_LEN_[%d]" % len(ws))
+    # Number of words between the mentions. We use it for supervision in
+    # supervise()
+    relation.ws_len = len(ws)
     # The sequence of lemmas between the two mentions but using the NERs, if
     # present
     seq_list = []
@@ -166,7 +205,7 @@ if __name__ == "__main__":
                     TSVstring2list, TSVstring2list,  # these are for the genes
                     TSVstring2list, lambda x: TSVstring2list(x, sep="!~!"),
                     TSVstring2list, TSVstring2list,  # these are for the HPO
-                    ])
+                ])
             # Remove the genes that are unsupervised copies
             supervised_idxs = set()
             unsupervised_idxs = set()
@@ -225,7 +264,8 @@ if __name__ == "__main__":
             for i in to_keep:
                 new_hpoterm_entities.append(line_dict["hpoterm_entities"][i])
                 new_hpoterm_wordidxss.append(line_dict["hpoterm_wordidxss"][i])
-                new_hpoterm_is_corrects.append(line_dict["hpoterm_is_corrects"][i])
+                new_hpoterm_is_corrects.append(
+                    line_dict["hpoterm_is_corrects"][i])
                 new_hpoterm_types.append(line_dict["hpoterm_types"][i])
             line_dict["hpoterm_entities"] = new_hpoterm_entities
             line_dict["hpoterm_wordidxss"] = new_hpoterm_wordidxss
@@ -243,7 +283,7 @@ if __name__ == "__main__":
                     line_dict["gene_wordidxss"][g_idx], int)
                 gene_mention = Mention(
                     "GENE", line_dict["gene_entities"][g_idx],
-                [sentence.words[j] for j in g_wordidxs])
+                    [sentence.words[j] for j in g_wordidxs])
                 if line_dict["gene_is_corrects"][g_idx] == "n":
                     gene_mention.is_correct = None
                 elif line_dict["gene_is_corrects"][g_idx] == "f":
@@ -258,7 +298,7 @@ if __name__ == "__main__":
                         line_dict["hpoterm_wordidxss"][h_idx], int)
                     hpoterm_mention = Mention(
                         "hpoterm", line_dict["hpoterm_entities"][h_idx],
-                    [sentence.words[j] for j in h_wordidxs])
+                        [sentence.words[j] for j in h_wordidxs])
                     if line_dict["hpoterm_is_corrects"][h_idx] == "n":
                         hpoterm_mention.is_correct = None
                     elif line_dict["hpoterm_is_corrects"][h_idx] == "f":
@@ -275,36 +315,9 @@ if __name__ == "__main__":
                         "GENEHPOTERM", gene_mention, hpoterm_mention)
                     # Add features
                     add_features(relation, gene_mention, hpoterm_mention,
-                                sentence)
+                                 sentence)
                     # Supervise
-                    # One of the two mentions is labelled as False
-                    if gene_mention.is_correct == False and \
-                            hpoterm_mention.is_correct != False:
-                        relation.is_correct = False
-                        relation.type = "GENEHPOTERM_SUP_F_G"
-                    elif hpoterm_mention.is_correct == False and \
-                            gene_mention.is_correct != False:
-                        relation.is_correct = False
-                        relation.type = "GENEHPOTERM_SUP_F_H"
-                    elif hpoterm_mention.is_correct == False and \
-                            gene_mention.is_correct == False:
-                        relation.is_correct = False
-                        relation.type = "GENEHPOTERM_SUP_F_GH"
-                    # Present in the existing HPO mapping 
-                    else:
-                        in_mapping = False
-                        hpo_entity_id = hpoterm_mention.entity.split("|")[0]
-                        if frozenset([gene_mention.words[0].word, hpo_entity_id]) in \
-                                genehpoterms_dict:
-                            in_mapping = True
-                        else: 
-                            for gene in gene_mention.entity.split("|"):
-                                if frozenset([gene, hpo_entity_id]) in \
-                                        genehpoterms_dict:
-                                    in_mapping = True
-                                    break
-                        if in_mapping:
-                            relation.is_correct = True
-                            relation.type = "GENEHPOTERM_SUP_MAP"
+                    supervise(relation, gene_mention, hpoterm_mention,
+                              sentence)
                     # Print!
                     print(relation.tsv_dump())

@@ -3,6 +3,19 @@
 from helper.easierlife import BASE_DIR
 
 
+# Load the doc acronyms hpoterm dictionary
+def load_doc_acronyms_hpoterms_dictionary(filename):
+    doc_acronyms = dict()
+    with open(filename, 'rt') as _file:
+        for line in _file:
+            tokens = line.strip().split("\t")
+            doc_id = tokens[0]
+            acronyms = tokens[1].split("|")
+            hpoterms_ids = tokens[2].split("|")
+            doc_acronyms[doc_id] = dict(zip(acronyms, hpoterms_ids))
+    return doc_acronyms
+
+
 # Load an example dictionary
 # 1st column is doc id, 2nd is sentence ids (separated by '|'), 3rd is entity
 def load_examples_dictionary(filename):
@@ -61,6 +74,7 @@ def load_long_names_dictionary(filename):
                     long_names_dict[sym] = []
                 long_names_dict[sym] += names
     return long_names_dict
+
 
 # Load the inverted gene long names dictionary
 def load_inverted_long_names_dictionary(filename):
@@ -178,6 +192,20 @@ def load_hpoterms_orig_dictionary(filename):
     return hpoterms_dict
 
 
+# Load the dictionary mapping hpoterms ids to the names
+def load_hpoterms_id_to_names_dictionary(filename):
+    hpoterms_dict = dict()
+    with open(filename, 'rt') as hpoterms_dict_file:
+        for line in hpoterms_dict_file:
+            tokens = line.strip().split("\t")
+            # 1st token is name, 2nd is description, 3rd is 'C' and 4th is
+            # (presumably) the distance from the root of the DAG.
+            hpoterm_id = tokens[0]
+            name = tokens[1]
+            hpoterms_dict[hpoterm_id] = name
+    return hpoterms_dict
+
+
 # Load the HPOterms 'mentions' dictionary (output of hpoterms2mentions.py)
 # Maps stem sets to hpo names
 def load_hpoterms_dictionary(filename):
@@ -211,6 +239,19 @@ def load_hponames_to_ids_dictionary(filename):
         for line in _hpoterms_dict_file:
             hpoterm_id, name, stems = line[:-1].split("\t")
             _hpoterms_dict[name] = hpoterm_id
+    return _hpoterms_dict
+
+
+# Load the HPO name (sets) to id dictionary
+def load_hponame_sets_to_ids_dictionary(filename):
+    _hpoterms_dict = dict()
+    with open(filename, 'rt') as _file:
+        for line in _file:
+            tokens = line.split("\t")
+            hpoterm_id = tokens[1]
+            name_tokens = tokens[0].split("|")
+            name_set = frozenset(name_tokens)
+            _hpoterms_dict[name_set] = hpoterm_id
     return _hpoterms_dict
 
 
@@ -256,6 +297,8 @@ def load_set_pairs(filename):
     return pair_set
 
 # Dictionaries
+DOC_ACRONYMS_HPOTERMS_DICT_FILENAME = BASE_DIR + \
+    "/dicts/doc_acronyms_hpoterms.tsv"
 GENES_DICT_FILENAME = BASE_DIR + "/dicts/hugo_synonyms.tsv"
 GENES_IN_HPOTERMS_DICT_FILENAME = BASE_DIR + "/dicts/genes_in_hpoterms.tsv"
 ENGLISH_DICT_FILENAME = BASE_DIR + "/dicts/english_words.tsv"
@@ -265,6 +308,8 @@ HPOPARENTS_DICT_FILENAME = BASE_DIR + "/dicts/hpo_dag.tsv"
 HPOTERMS_ORIG_DICT_FILENAME = BASE_DIR + "/dicts/hpo_terms.tsv"
 # NON PRUNED HPOTERMS_DICT_FILENAME = BASE_DIR + "/dicts/hpoterm_mentions.tsv"
 HPOTERMS_DICT_FILENAME = BASE_DIR + "/dicts/hpoterm_abnormalities_mentions.tsv"
+HPONAME_SETS_TO_IDS_DICT_FILENAME = BASE_DIR + \
+    "/dicts/hpoterm_name_sets_to_ids.tsv"
 HPOTERM_PHENOTYPE_ABNORMALITIES_DICT_FILENAME = BASE_DIR + \
     "/dicts/hpoterm_phenotype_abnormalities.tsv"
 HPOTERMS_IN_GENES_DICT_FILENAME = BASE_DIR + "/dicts/hpoterms_in_genes.tsv"
@@ -282,6 +327,8 @@ NEG_GENE_MENTIONS_DICT_FILENAME = BASE_DIR + \
 # function to call to load the dictionary. The function must take the filename
 # as input and return an object like a dictionary, or a set, or a list, ...
 dictionaries = dict()
+dictionaries["doc_acronyms_hpoterms"] = [DOC_ACRONYMS_HPOTERMS_DICT_FILENAME,
+        load_doc_acronyms_hpoterms_dictionary]
 dictionaries["genes"] = [GENES_DICT_FILENAME, load_genes_dictionary]
 dictionaries["genes_in_hpoterms"] = [GENES_IN_HPOTERMS_DICT_FILENAME,
                                      load_genes_in_hpoterms_dictionary]
@@ -295,8 +342,12 @@ dictionaries["hpochildren"] = [HPOPARENTS_DICT_FILENAME,
                                load_hpochildren_dictionary]
 dictionaries["hpolevels"] = [HPOTERMS_ORIG_DICT_FILENAME,
                              load_hpoterm_levels_dictionary]
+dictionaries["hpoterms_id_to_names"] = [HPOTERMS_ORIG_DICT_FILENAME,
+                                        load_hpoterms_id_to_names_dictionary]
 dictionaries["hponames_to_ids"] = [HPOTERMS_DICT_FILENAME,
                                    load_hponames_to_ids_dictionary]
+dictionaries["hponame_sets_to_ids"] = [HPONAME_SETS_TO_IDS_DICT_FILENAME,
+                                       load_hponame_sets_to_ids_dictionary]
 dictionaries["hpoterms"] = [HPOTERMS_DICT_FILENAME, load_hpoterms_dictionary]
 dictionaries["hpoterms_inverted"] = [HPOTERMS_DICT_FILENAME,
                                      load_hpoterms_inverted_dictionary]
@@ -307,7 +358,7 @@ dictionaries["hpoterms_orig"] = [HPOTERMS_ORIG_DICT_FILENAME,
 dictionaries["hpoterms_in_genes"] = [HPOTERMS_IN_GENES_DICT_FILENAME,
                                      load_hpoterms_in_genes_dictionary]
 dictionaries["hpoterms_with_gene"] = [GENES_IN_HPOTERMS_DICT_FILENAME,
-                                     load_hpoterms_with_gene_dictionary]
+                                      load_hpoterms_with_gene_dictionary]
 dictionaries["nih_grants"] = [NIH_GRANTS_DICT_FILENAME, load_set]
 dictionaries["nsf_grants"] = [NSF_GRANTS_DICT_FILENAME, load_set]
 dictionaries["med_acrons"] = [MED_ACRONS_DICT_FILENAME,

@@ -14,7 +14,7 @@ from helper.dictionaries import load_dict
 
 max_mention_length = 8  # This is somewhat arbitrary
 
-NEG_PROB = 0.005  #  Probability of generating a random negative mention
+NEG_PROB = 0.005  # Probability of generating a random negative mention
 
 # Keyword that seems to appear with phenotypes
 VAR_KWS = frozenset([
@@ -25,10 +25,10 @@ VAR_KWS = frozenset([
     "group", "history", "infection", "inflammatory", "injury", "mutation",
     "pathway", "phenotype", "polymorphism", "prevalence", "protein", "risk",
     "severe", "stage", "symptom", "syndrome", "therapy", "therapeutic",
-    "treat", "treatment", "variant" "viruses", "virus" ])
+    "treat", "treatment", "variant" "viruses", "virus"])
 
-PATIENT_KWS = frozenset(["boy", "girl", "man", "woman", "men", "women",
-"patient", "patients" ])
+PATIENT_KWS = frozenset([
+    "boy", "girl", "man", "woman", "men", "women", "patient", "patients"])
 
 KEYWORDS = VAR_KWS | PATIENT_KWS
 
@@ -37,7 +37,9 @@ english_dict = load_dict("english")
 stopwords_dict = load_dict("stopwords")
 inverted_hpoterms = load_dict("hpoterms_inverted")
 hponames_to_ids = load_dict("hponames_to_ids")
+hpoids_to_names = load_dict("hpoterms_id_to_names")
 genes_with_hpoterm = load_dict("genes_with_hpoterm")
+doc_acronyms = load_dict("doc_acronyms_hpoterms")
 # hpodag = load_dict("hpoparents")
 
 
@@ -107,7 +109,7 @@ def add_features(mention, sentence):
     except IndexError:
         pass
     # The lemma "two on the left" of the mention, if present
-    try: 
+    try:
         mention.add_feature("NGRAM_LEFT_2_[{}]".format(
             sentence.words[mention.wordidxs[0] - 2].lemma))
     except IndexError:
@@ -159,6 +161,10 @@ def add_features(mention, sentence):
 
 # Return a list of mention candidates extracted from the sentence
 def extract(sentence):
+    acronyms = None
+    if sentence.doc_id in doc_acronyms:
+        acronyms = doc_acronyms[sentence.doc_id]
+
     mentions = []
     mention_ids = set()
     # If there are no English words in the sentence, we skip it.
@@ -191,6 +197,19 @@ def extract(sentence):
             for word in sentence.words[start:end]:
                 history.add(word.in_sent_idx)
             continue
+        # Create mentions for the acronyms that are used in the document to
+        # refer to some hpoterm
+        if acronyms:
+            if phrase in acronyms:
+                mention = Mention(
+                    "HPOTERM_ACRO", acronyms[phrase] + "|" +
+                    hpoids_to_names[acronyms[phrase]],
+                    sentence.words[start:end])
+                add_features(mention, sentence)
+                mention.append(mention)
+                for word in sentence.words[start:end]:
+                    history.add(word.in_sent_idx)
+                continue
         # The list of stems in the phrase (not from stopwords or symbols, and
         # not already used for a mention)
         phrase_stems = []
@@ -215,8 +234,9 @@ def extract(sentence):
                     if len(mention_words) == len(phrase_stems_set):
                         break
             entity = list(hpoterms_dict[phrase_stems_set])[0]
-            mention = Mention("HPOTERM", hponames_to_ids[entity] + "|" +
-                                  entity, mention_words)
+            mention = Mention(
+                "HPOTERM", hponames_to_ids[entity] + "|" + entity,
+                mention_words)
             # The following is a way to avoid duplicates.
             # It's ugly and not perfect
             if mention.id() in mention_ids:
