@@ -3,6 +3,8 @@
 # Extract gene mention candidates, add features, and
 # perform distant supervision
 #
+# TEST
+#
 
 import fileinput
 import re
