@@ -1,8 +1,14 @@
+DROP TABLE IF EXISTS relidfeat;
+CREATE TABLE relidfeat AS (
+		SELECT doc_id, relation_id, unnest(features) as feature FROM gene_hpoterm_relations_is_correct_inference
+) DISTRIBUTED BY (doc_id);
 COPY (
-WITH relidfeat AS (
-		SELECT relation_id, unnest(features) as feature FROM gene_hpoterm_relations_is_correct_inference
-)
-SELECT t0.relation_id  as relation_id 
+-- WITH relidfeat AS (
+--SELECT relation_id, unnest(features) as feature FROM gene_hpoterm_relations_is_correct_inference
+--)
+SELECT 
+		t0.doc_id as doc_id
+	 ,  t0.relation_id  as relation_id 
      ,  array_to_string(t5.words, '_') || '/' || t6.entity     as relation_name
      ,  t0.wordidxs_1 as gene_words 
      ,  t0.wordidxs_2 as hpoterm_words 
@@ -43,7 +49,8 @@ AND
 AND
 	t0.expectation > 0.9
 ORDER BY random()
-LIMIT 100
+--LIMIT 100
+LIMIT 500
 --LIMIT 1
 ) TO STDOUT WITH HEADER
 ;
