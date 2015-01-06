@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import fileinput
+import random
 import re
 
 from dstruct.Mention import Mention
@@ -66,7 +67,7 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
                 if i < betw_end - 2:
                     neg_found = True
                     relation.add_feature(
-                        inv + "NEG_VERB_[" + sentence.words[i-1].word + "]-" +
+                        inv + "NEG_VERB_[" + sentence.words[i-1].lemma + "]-" +
                         sentence.words[i].lemma)
             else:
                 verbs_between.append(sentence.words[i])
@@ -76,7 +77,7 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
         for verb in verbs_between:
             if verb.in_sent_idx > betw_start and \
                     verb.in_sent_idx < betw_end:
-                relation.add_feature(inv + "VERB_[%s]" % verb)
+                relation.add_feature(inv + "VERB_[%s]" % verb.lemma)
     if mini_hpo == mini_gene and mini_gene is not None and \
             len(minp_gene) < 50:  # and "," not in minw_gene:
         # feature = inv + 'MIN_VERB_[' + minw_gene + ']' + minp_gene
@@ -103,7 +104,7 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
     # enough" to avoid overfitting. The concept of "close enough" is somewhat
     # arbitrary.
     neg_word_index = -1
-    if betw_end - betw_start - 1 < 8:
+    if betw_end - betw_start - 1 < 15:
         for i in range(betw_start+1, betw_end):
             # Feature for separation between entities.
             # TODO Think about merging these?
@@ -159,6 +160,11 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
         # Shortest dependency path between the two mentions
         relation.add_feature(inv + "DEP_PATH_[" + sentence.dep_path(
             gene_mention, hpoterm_mention) + "]")
+    else:
+        relation.add_feature(inv + "WORD_SEQ_[TOO_FAR_AWAY]")
+        relation.add_feature(inv + "WORD_SEQ_NER_[TOO_FAR_AWAY]")
+        relation.add_feature(inv + "POS_SEQ_[TOO_FAR_AWAY]")
+        relation.add_feature(inv + "DEP_PATH_[TOO_FAR_AWAY]")
     # Number of words between the mentions
     # TODO I think this should be some kind of supervision rule instead?
     # relation.add_feature(
@@ -167,7 +173,8 @@ def add_features(relation, gene_mention, hpoterm_mention, sentence):
     if betw_end - betw_start - 1 > 4 and betw_start - betw_end - 1 < 15:
         for i in range(betw_start + 1, betw_end - 1):
             relation.add_feature(
-                "BETW_2_GRAM_[" + sentence.words[i].lemma + "_" +
+                inv + "BETW_2_GRAM_[" +
+                sentence.words[i].lemma + "_" +
                 sentence.words[i+1].lemma + "]")
     # Lemmas on the exterior of the mentions and on the interior
     feature = inv
@@ -318,10 +325,17 @@ if __name__ == "__main__":
             # Skip weird sentences
             if sentence.is_weird():
                 continue
-            # Iterate over each pair of (gene,phenotype) mention
+            gene_mentions = []
+            hpoterm_mentions = []
+            positive_relations = []
+            gene_wordidxs = set()
+            hpoterm_wordidxs = set()
+            # Iterate over each pair of (gene,phenotype) mentions
             for g_idx in range(len(line_dict["gene_is_corrects"])):
                 g_wordidxs = TSVstring2list(
                     line_dict["gene_wordidxss"][g_idx], int)
+                for idx in g_wordidxs:
+                    gene_wordidxs.add(idx)
                 gene_mention = Mention(
                     "GENE", line_dict["gene_entities"][g_idx],
                     [sentence.words[j] for j in g_wordidxs])
@@ -335,9 +349,12 @@ if __name__ == "__main__":
                     assert False
                 gene_mention.type = line_dict["gene_types"][g_idx]
                 assert not gene_mention.type.endswith("_UNSUP")
+                gene_mentions.append(gene_mention)
                 for h_idx in range(len(line_dict["hpoterm_is_corrects"])):
                     h_wordidxs = TSVstring2list(
                         line_dict["hpoterm_wordidxss"][h_idx], int)
+                    for idx in h_wordidxs:
+                        hpoterm_wordidxs.add(idx)
                     hpoterm_mention = Mention(
                         "hpoterm", line_dict["hpoterm_entities"][h_idx],
                         [sentence.words[j] for j in h_wordidxs])
@@ -351,6 +368,7 @@ if __name__ == "__main__":
                         assert False
                     hpoterm_mention.type = line_dict["hpoterm_types"][h_idx]
                     assert not hpoterm_mention.type.endswith("_UNSUP")
+                    hpoterm_mentions.append(hpoterm_mention)
                     # Skip if the word indexes overlab
                     if set(g_wordidxs) & set(h_wordidxs):
                         continue
@@ -374,5 +392,95 @@ if __name__ == "__main__":
                     # Supervise
                     supervise(relation, gene_mention, hpoterm_mention,
                               sentence)
+                    if relation.is_correct:
+                        positive_relations.append(
+                            (gene_mention, hpoterm_mention))
                     # Print!
                     print(relation.tsv_dump())
+            # Create some artificial negative examples:
+            # for each (gene, phenotype) pair that is labelled as positive
+            # example, select one word w in the same sentence that (1) is not a
+            # gene mention candidate and (2) is not a phenotype mention
+            # candidate, add (gene, w) and (w, phenotype) as negative example
+            avail_wordidxs = (
+                set(line_dict["wordidxs"]) - set(hpoterm_wordidxs)) - \
+                set(gene_wordidxs)
+            avail_wordidxs = list(avail_wordidxs)
+            if len(avail_wordidxs) > 0:
+                fake_rels = []
+                for (gene_mention, hpoterm_mention) in positive_relations:
+                    other_word = sentence.words[random.choice(avail_wordidxs)]
+                    fake_gene_mention = Mention(
+                        "FAKE_GENE", other_word.lemma, [other_word, ])
+                    fake_hpo_mention = Mention(
+                        "FAKE_HPOTERM", other_word.lemma, [other_word, ])
+                    fake_rel_1 = Relation(
+                        "GENEHPOTERM_SUP_POSFAKEGENE", fake_gene_mention,
+                        hpoterm_mention)
+                    fake_rel_2 = Relation(
+                        "GENEHPOTERM_SUP_POSFAKEHPO", gene_mention,
+                        fake_hpo_mention)
+                    add_features(
+                        fake_rel_1, fake_gene_mention, hpoterm_mention,
+                        sentence)
+                    add_features(
+                        fake_rel_2, gene_mention, fake_hpo_mention, sentence)
+                    fake_rel_1.is_correct = False
+                    fake_rel_2.is_correct = False
+                    # Print!
+                    print(fake_rel_1.tsv_dump())
+                    print(fake_rel_2.tsv_dump())
+            # Create more artificial negative examples:
+            # for each gene candidate G in the sentence, if the pattern G
+            # <Verb> X appears in the same sentence and X is not a phenotype
+            # mention candidate, add (gene, X) as negative examples
+            for gene_mention in gene_mentions:
+                try:
+                    next_word = sentence.words[gene_mention.wordidxs[-1] + 1]
+                except IndexError:
+                    continue
+                if re.search('^VB[A-Z]*$', next_word.pos) and \
+                        next_word.word not in ["{", "}", "(", ")", "[", "]"]:
+                    try:
+                        after_next_word = sentence.words[
+                            next_word.in_sent_idx + 1]
+                    except IndexError:
+                        continue
+                    if after_next_word.in_sent_idx in hpoterm_wordidxs:
+                        continue
+                    fake_hpo_mention = Mention(
+                        "FAKE_HPOTERM", after_next_word.lemma,
+                        [after_next_word, ])
+                    fake_rel = Relation(
+                        "GENEHPOTERM_SUP_FAKEHPO", gene_mention,
+                        fake_hpo_mention)
+                    add_features(
+                        fake_rel, gene_mention, fake_hpo_mention, sentence)
+                    fake_rel.is_correct = False
+                    print(fake_rel.tsv_dump())
+            # Create more artificial negative examples:
+            # as before but for phenotypes
+            for hpo_mention in hpoterm_mentions:
+                try:
+                    next_word = sentence.words[hpo_mention.wordidxs[-1] + 1]
+                except IndexError:
+                    continue
+                if re.search('^VB[A-Z]*$', next_word.pos) and \
+                        next_word.word not in ["{", "}", "(", ")", "[", "]"]:
+                    try:
+                        after_next_word = sentence.words[
+                            next_word.in_sent_idx + 1]
+                    except IndexError:
+                        continue
+                    if after_next_word.in_sent_idx in gene_wordidxs:
+                        continue
+                    fake_gene_mention = Mention(
+                        "FAKE_GENE", after_next_word.lemma,
+                        [after_next_word, ])
+                    fake_rel = Relation(
+                        "GENEHPOTERM_SUP_FAKEGENE", fake_gene_mention,
+                        hpo_mention)
+                    add_features(
+                        fake_rel, fake_gene_mention, hpo_mention, sentence)
+                    fake_rel.is_correct = False
+                    print(fake_rel.tsv_dump())
