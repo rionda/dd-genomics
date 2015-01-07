@@ -1,0 +1,1518 @@
+{
+ "version": 1,
+ "key_columns": [
+  "relation_id"
+ ],
+ "by_key": {
+  "RELATION_GENEHPOTERM_journal.pone.0084347.pdf_274_274_11_11_15_16": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0063219.pdf_549_549_29_29_35_36": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0039804.pdf_671_671_10_10_23_23_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0019113.pdf_443_443_1_1_46_46_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0081750.pdf_54_54_14_14_26_26": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pntd.0000761.pdf_299_299_1_1_29_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0088748.pdf_429_429_23_23_34_34": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0071490.pdf_202_202_25_25_9_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0027566.pdf_577_577_31_31_23_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_gb-2009-10-10-r104.pdf_445_445_60_60_52_53": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0030526.pdf_386_386_30_30_15_15_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0022819.pdf_424_424_4_4_33_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18739.pdf_525_525_5_5_8_10": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.ppat.1001339.pdf_591_591_1_1_16_16_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pgen.1004082.pdf_111_111_23_23_41_41_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0018132.pdf_266_266_21_21_25_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0067266.pdf_530_530_4_4_25_25": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.ppat.1000249.pdf_292_292_22_22_2_3": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0091815.pdf_248_248_11_11_34_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0081615.pdf_180_180_32_33_20_21_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pgen.1000704.pdf_7_7_3_3_1_1": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0097921.pdf_287_287_22_22_27_28": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0081222.pdf_267_267_11_11_7_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0051681.pdf_49_49_33_33_20_20_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0049113.pdf_20_20_39_39_18_18_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18240.pdf_235_235_4_4_2_3": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0050988.pdf_200_200_26_26_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1002580.pdf_50_50_16_16_10_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0079030.pdf_252_252_7_7_39_40": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0054512.pdf_635_635_1_1_14_14": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0036672.pdf_420_420_12_12_21_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0079545.pdf_523_523_15_15_5_5_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0098194.pdf_163_163_2_2_8_8": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0009718.pdf_431_431_25_25_28_29": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0096167.pdf_338_338_11_11_27_29": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0092053.pdf_422_422_34_34_8_8": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pbio.1001651.pdf_59_59_24_24_43_43_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0053787.pdf_158_158_41_41_31_31_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1001093.pdf_143_143_37_37_16_17_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_42062.pdf_44_44_30_30_12_13_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038870.pdf_742_742_23_23_25_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038463.pdf_838_838_28_28_36_36": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0078881.pdf_616_616_20_21_35_36_UNSUP": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0042662.pdf_301_301_22_22_6_6_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0002717.pdf_317_317_7_7_22_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0073426.pdf_309_309_7_7_13_13": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038812.pdf_557_557_26_27_34_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0072570.pdf_277_277_19_19_25_25": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0103063.pdf_454_454_4_4_36_37_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_19316.pdf_191_191_8_8_15_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038955.pdf_256_256_11_11_16_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0026121.pdf_13_13_15_15_40_40": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0005498.pdf_280_280_11_11_5_5": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0004262.pdf_51_51_24_24_20_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0077819.pdf_512_512_4_4_29_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18738.pdf_551_551_15_15_26_26": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_gb-2013-14-5-r46.pdf_320_320_1_1_6_6": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0035830.pdf_537_537_11_11_4_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0007469.pdf_686_686_1_1_34_34_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pgen.1003032.pdf_885_885_4_4_30_30": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0103532.pdf_40_40_29_29_71_72": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_23556.pdf_58_58_30_30_15_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0091186.pdf_47_47_6_6_17_17": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18688.pdf_98_98_7_7_5_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pgen.1002256.pdf_641_641_33_33_22_22": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_20720.pdf_487_487_2_3_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0081629.pdf_226_226_1_1_27_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0022715.pdf_136_136_29_29_7_7_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1000036.pdf_400_400_34_34_45_46_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pgen.1002667.pdf_292_292_34_34_35_35_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0089684.pdf_385_385_35_35_27_28": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0094398.pdf_602_602_11_11_7_7_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_41722.pdf_16_16_5_5_22_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0090106.pdf_174_174_9_9_1_5_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0065017.pdf_377_377_10_10_21_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0090417.pdf_136_136_23_23_12_12": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0101145.pdf_690_690_0_0_34_34": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0022158.pdf_42_42_42_42_74_75": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0060089.pdf_349_349_21_21_37_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0021198.pdf_171_171_46_46_5_6": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pntd.0001154.pdf_54_54_31_31_17_18_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0060363.pdf_42_42_65_65_24_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_46072.pdf_415_415_25_25_11_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0073900.pdf_794_794_16_16_38_38_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pbio.0000083.pdf_281_281_27_30_38_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_20015.pdf_353_353_0_0_19_20_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_SCPDFS_22959.pdf_131_131_11_11_1_1_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_297.pdf_898_898_15_15_8_8": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0042878.pdf_224_224_5_5_19_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0103600.pdf_380_380_15_15_27_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0066047.pdf_365_365_10_10_32_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0023916.pdf_590_590_27_27_32_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0090565.pdf_526_526_16_16_19_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0054169.pdf_38_38_36_36_47_47_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0100904.pdf_321_321_10_10_23_26": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0067530.pdf_481_481_14_14_26_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_19851.pdf_344_344_27_27_22_22": {
+   "not": null
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0039801.pdf_12_12_29_29_15_16_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pgen.1002274.pdf_550_550_8_8_20_20_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0008229.pdf_89_89_1_1_29_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0093121.pdf_364_364_28_28_38_38_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0012717.pdf_179_179_1_1_3_3": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0085416.pdf_273_273_22_22_3_3_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.ppat.1004229.pdf_825_825_28_28_22_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0080414.pdf_180_180_18_18_61_61": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0079863.pdf_443_443_13_13_26_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0029366.pdf_8_8_6_6_27_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0039201.pdf_35_35_5_5_7_8": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0042134.pdf_314_314_17_17_15_15_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0100324.pdf_440_440_7_7_20_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0078603.pdf_99_99_40_40_20_20_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0073164.pdf_60_60_19_19_11_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pone.0029350.pdf_587_587_4_4_20_20_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0000047.pdf_23_23_16_16_9_9_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.ppat.1003214.pdf_1027_1027_22_22_32_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038394.pdf_546_546_16_16_20_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0025854.pdf_795_795_22_22_12_13_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1001257.pdf_387_387_1_1_28_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0098258.pdf_256_256_15_15_42_42": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0085851.pdf_680_680_8_8_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_37950.pdf_24_24_4_4_1_2_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_1519.pdf_311_311_12_12_9_9": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0101082.pdf_294_294_25_25_32_32": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0044418.pdf_457_457_0_0_17_18": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0069989.pdf_709_709_4_4_26_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_37960.pdf_342_342_43_43_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pbio.1001534.pdf_948_948_32_32_8_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0014085.pdf_421_421_27_27_31_31": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_20853.pdf_27_27_32_32_15_16_UNSUP": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0082450.pdf_2_2_9_9_6_7_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0032775.pdf_7_7_18_18_15_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0053928.pdf_368_368_7_7_22_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_gb-2002-3-3-research0014.pdf_306_306_28_29_23_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_38485.pdf_26_26_24_24_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0032444.pdf_604_604_26_26_21_21_UNSUP": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0035496.pdf_377_377_13_13_20_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0043594.pdf_497_497_6_6_30_31_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0023630.pdf_777_777_4_4_18_18": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_19036.pdf_558_558_17_17_7_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0061054.pdf_340_340_72_72_27_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pgen.1001293.pdf_627_627_13_13_18_21": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0020614.pdf_790_790_29_29_33_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pcbi.1003472.pdf_238_238_14_14_49_50": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pgen.1003180.pdf_98_98_9_9_1_2_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0052169.pdf_1057_1057_1_1_21_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0033511.pdf_83_83_73_73_112_112": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0054203.pdf_501_501_24_24_35_36": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0021671.pdf_273_273_7_7_11_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0101245.pdf_237_237_13_13_28_28": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0012532.pdf_526_526_5_5_21_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0104367.pdf_2_2_15_15_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0047057.pdf_363_363_13_13_28_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_21929.pdf_237_237_10_10_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0052707.pdf_184_184_6_6_17_17": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0003447.pdf_50_50_7_7_8_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0048789.pdf_412_412_12_12_25_25": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0020618.pdf_845_845_31_31_45_45_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0023720.pdf_22_22_16_16_13_13_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pone.0093975.pdf_2_2_12_12_1_1_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0048119.pdf_334_334_17_17_32_32_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0005354.pdf_31_31_45_45_40_41": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pbio.1001593.pdf_26_26_7_7_10_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0064499.pdf_356_356_7_7_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0014757.pdf_926_926_0_0_14_14": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0079790.pdf_164_164_3_3_34_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0070101.pdf_434_434_13_13_29_31_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0016259.pdf_674_674_6_6_12_12": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0100349.pdf_126_126_35_35_47_47_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_25126.pdf_364_364_36_36_41_42": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1003816.pdf_594_594_1_1_18_18_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0029064.pdf_1022_1022_4_4_15_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0080533.pdf_35_35_11_11_9_9_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0051974.pdf_636_636_33_33_38_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0063566.pdf_336_336_34_34_1_1_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0057809.pdf_107_107_13_13_19_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_34128.pdf_591_591_1_1_5_5_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0022968.pdf_714_714_26_26_29_31_UNSUP": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0032700.pdf_558_558_46_46_43_44": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0085540.pdf_402_402_1_1_19_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0055441.pdf_7_7_6_6_13_14": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0011520.pdf_54_54_4_4_30_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0085328.pdf_299_299_8_8_32_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0081283.pdf_723_723_19_19_21_22": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0073865.pdf_592_592_4_4_24_24_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0072312.pdf_506_506_25_25_28_29_UNSUP": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pbio.1001623.pdf_339_339_28_28_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0044369.pdf_463_463_10_10_33_34_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_39259.pdf_24_24_7_7_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_46497.pdf_95_95_42_42_36_36": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0053684.pdf_529_529_7_7_32_33_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0090106.pdf_58_58_45_45_17_17": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0099307.pdf_275_275_13_13_7_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_43467.pdf_2_2_12_12_7_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0080869.pdf_324_324_24_25_20_21_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0049570.pdf_633_633_5_5_36_36_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_40319.pdf_17_17_36_36_10_10_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_39991.pdf_164_164_6_6_25_25_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_276.pdf_654_654_0_0_15_15": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0044962.pdf_322_322_29_29_5_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_2727.pdf_222_222_9_9_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0029538.pdf_414_414_17_17_25_26_UNSUP": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0018134.pdf_348_348_1_1_18_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0068616.pdf_353_353_33_33_42_43": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0025341.pdf_468_468_15_15_8_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pgen.1002134.pdf_267_267_69_69_90_91": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_195.pdf_132_132_34_34_35_35_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0079680.pdf_201_201_7_7_21_21_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0044060.pdf_512_512_15_15_30_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0033047.pdf_230_230_0_0_2_2": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0044973.pdf_1196_1196_7_7_35_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0098988.pdf_1011_1011_23_24_31_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0004897.pdf_629_629_29_29_36_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0057935.pdf_13_13_36_36_31_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0052824.pdf_7_7_26_26_18_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0081312.pdf_59_59_8_8_14_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0019971.pdf_735_735_1_1_28_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0077787.pdf_132_132_28_28_33_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_24447.pdf_302_302_10_10_15_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0064138.pdf_526_526_24_24_40_40": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0051797.pdf_117_117_31_31_21_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0047493.pdf_540_540_10_10_23_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0074973.pdf_373_373_17_17_23_23": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pbio.0040218.pdf_672_672_0_0_31_32_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0072414.pdf_55_55_4_4_2_2": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0051217.pdf_557_557_4_4_23_24_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038214.pdf_332_332_15_15_24_25": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0097023.pdf_400_400_19_19_28_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0070001.pdf_45_45_77_77_89_89": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0024709.pdf_294_294_53_53_38_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0048228.pdf_94_94_14_14_33_33": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0041208.pdf_351_351_1_1_31_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0022895.pdf_523_523_16_16_17_18": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0088724.pdf_513_513_27_27_35_36": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0103660.pdf_379_379_10_10_24_25_UNSUP": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0087388.pdf_318_318_14_14_8_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0060655.pdf_176_176_12_12_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0037722.pdf_291_291_7_7_8_8": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0000756.pdf_187_187_22_22_11_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0056258.pdf_289_289_8_8_12_13": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0084685.pdf_157_157_25_25_0_0_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pone.0040687.pdf_456_456_2_2_25_25_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0008958.pdf_656_656_31_31_33_33_UNSUP": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0049446.pdf_118_118_0_0_8_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0002668.pdf_890_890_28_28_29_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0079501.pdf_654_654_10_10_23_23_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0090300.pdf_472_472_9_9_16_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pntd.0002169.pdf_28_28_6_6_26_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1003751.pdf_250_250_15_15_8_9_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0049544.pdf_290_290_4_4_16_17_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0096958.pdf_291_291_27_27_36_36": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0036093.pdf_903_903_33_33_38_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0063224.pdf_468_468_10_10_31_31_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038477.pdf_523_523_15_15_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0042913.pdf_287_287_13_13_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0003958.pdf_65_65_16_16_28_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pbio.0020289.pdf_782_782_33_33_26_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0070802.pdf_517_517_11_11_31_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0102116.pdf_361_361_17_17_15_15_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0044959.pdf_7_7_51_51_39_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0062827.pdf_213_213_6_6_10_10_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0085854.pdf_95_95_17_17_19_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0065049.pdf_36_36_1_1_6_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0071629.pdf_469_469_22_22_36_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0067799.pdf_383_383_23_23_26_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0080480.pdf_128_128_0_0_7_7": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0003952.pdf_687_687_7_7_33_34_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pone.0088418.pdf_95_95_14_14_8_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0080853.pdf_336_336_7_7_27_27_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0027564.pdf_119_119_44_44_57_57": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0068805.pdf_87_87_2_2_4_4_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0050742.pdf_274_274_11_11_16_17": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0021108.pdf_78_78_9_9_5_6": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0002569.pdf_249_249_21_21_6_6": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0086701.pdf_35_35_10_11_8_8": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0050479.pdf_262_262_1_1_11_13_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0076099.pdf_488_488_4_4_37_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0023925.pdf_338_338_7_7_24_25_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0054362.pdf_331_331_12_12_34_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pcbi.1000607.pdf_458_458_37_37_17_18": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0104431.pdf_394_394_1_1_23_24_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0092952.pdf_392_392_23_23_25_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0059675.pdf_671_671_4_4_19_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0042815.pdf_347_347_8_8_37_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0093135.pdf_640_640_1_1_28_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0096829.pdf_540_540_7_7_22_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pone.0004149.pdf_58_58_34_34_29_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0037422.pdf_207_207_21_21_15_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0055147.pdf_603_603_22_22_34_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_45580.pdf_154_154_1_1_19_20_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0015045.pdf_106_106_36_36_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0056861.pdf_374_374_33_33_23_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_4871.pdf_71_71_19_19_14_14_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0103479.pdf_62_62_0_0_2_2": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0059247.pdf_232_232_14_14_49_49_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_46300.pdf_190_190_18_18_22_22": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0095433.pdf_484_484_16_16_28_30": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_28260.pdf_23_23_2_2_13_13": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0047841.pdf_482_482_0_0_5_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0031053.pdf_521_521_26_26_30_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0020781.pdf_618_618_28_28_36_36_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0038052.pdf_20_20_3_3_11_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_23835.pdf_184_184_43_43_37_37_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1004257.pdf_63_63_49_49_41_42_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0007792.pdf_69_69_34_34_45_46": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0042594.pdf_74_74_15_15_11_13": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_44185.pdf_50_50_5_5_17_18": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0066808.pdf_475_475_25_25_33_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0017569.pdf_429_429_13_13_15_16_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0068724.pdf_371_371_26_26_4_5_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0034082.pdf_563_563_1_1_27_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0036384.pdf_358_358_26_26_29_33": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0068201.pdf_330_330_1_1_40_40": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0032441.pdf_671_671_10_10_25_26": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0030996.pdf_667_667_20_20_34_35": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0095768.pdf_237_237_2_2_14_15_UNSUP": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_gb-2012-13-7-247.pdf_688_688_6_6_38_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_48955.pdf_131_131_14_14_28_29_UNSUP": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pgen.0030229.pdf_352_352_25_25_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_50994.pdf_157_157_12_12_1_1": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0097728.pdf_245_245_34_34_39_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_46641.pdf_21_21_32_32_51_51_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0065643.pdf_212_212_1_1_23_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0097720.pdf_38_38_39_39_31_31_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_22441.pdf_25_25_18_18_19_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0020785.pdf_117_117_6_6_19_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_25214.pdf_310_310_25_25_37_37": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0065556.pdf_772_772_24_24_29_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0029164.pdf_224_224_20_20_1_2": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_50985.pdf_261_261_14_14_2_3": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0087826.pdf_114_114_8_8_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_38596.pdf_425_425_12_12_51_51": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0042106.pdf_766_766_24_24_14_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pcbi.1003460.pdf_804_804_1_1_18_18_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0058465.pdf_85_85_31_31_5_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0041146.pdf_552_552_17_17_37_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0001032.pdf_56_56_55_55_8_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0068206.pdf_290_290_27_27_16_17": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0062651.pdf_428_428_7_7_20_20": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0053806.pdf_637_637_10_10_0_1": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0055375.pdf_405_405_26_26_15_15_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0081507.pdf_421_421_43_43_14_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0068125.pdf_292_292_41_41_54_54": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18683.pdf_126_126_3_3_14_15": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pgen.1004151.pdf_1590_1590_1_1_35_36": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0074589.pdf_80_80_11_11_35_36": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0017520.pdf_305_305_1_1_23_24_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0031411.pdf_462_462_1_1_37_37_UNSUP": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0017951.pdf_388_388_7_7_26_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0035963.pdf_52_52_6_6_15_15_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0055309.pdf_419_419_23_26_39_40": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0090105.pdf_368_368_1_1_23_23_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_37223.pdf_53_53_38_38_34_36_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0100441.pdf_314_314_48_48_61_61": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0051155.pdf_337_337_34_34_1_1": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0027687.pdf_16_16_11_11_35_35_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0101060.pdf_603_603_19_19_20_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_gb-2004-5-6-r43.pdf_255_255_35_35_56_56": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0086605.pdf_107_107_9_9_1_1_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0092811.pdf_22_22_66_66_33_33": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0094743.pdf_582_582_10_10_31_32": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0001418.pdf_264_264_0_0_13_13": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0059872.pdf_527_527_8_8_36_36_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_21639.pdf_53_53_27_27_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1002853.pdf_838_838_10_10_32_32_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_23802.pdf_51_51_10_10_15_17": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0052113.pdf_144_144_6_6_9_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0022135.pdf_31_31_12_12_8_8": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_24799.pdf_919_919_16_16_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0093229.pdf_417_417_1_1_27_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0103485.pdf_126_126_40_40_5_5_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pmed.0050120.pdf_522_522_13_13_22_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pntd.0002328.pdf_555_555_40_40_25_25": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0041763.pdf_63_63_13_13_23_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0101518.pdf_596_596_1_1_42_43": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pgen.1003685.pdf_143_143_71_71_42_43_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18688.pdf_76_76_26_26_13_13": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0049624.pdf_736_736_8_8_39_40": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_3801.pdf_56_56_19_19_33_33": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_gb-2014-15-1-r12.pdf_742_742_32_32_56_56_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0001936.pdf_10_10_18_18_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pmed.0020171.pdf_456_456_7_7_24_25_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.ppat.1000796.pdf_19_19_27_27_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0030555.pdf_389_389_4_4_21_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0015094.pdf_48_48_19_19_12_12_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0077818.pdf_134_134_26_26_35_35": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pone.0012823.pdf_613_613_17_17_2_2_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0011044.pdf_492_492_6_6_25_25": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_SCPDFS_18982.pdf_48_48_41_41_17_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0097346.pdf_429_429_2_2_13_13": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.ppat.1002371.pdf_1025_1025_1_1_28_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0043833.pdf_64_64_1_1_8_9": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0048594.pdf_569_569_10_10_29_30": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0087440.pdf_342_342_4_4_31_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0046683.pdf_366_366_30_30_21_21": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0084762.pdf_459_459_4_4_28_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_18495.pdf_39_39_5_5_3_3_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0011256.pdf_51_51_18_18_4_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pgen.1004302.pdf_1221_1221_24_24_37_38": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_18936.pdf_62_62_30_30_35_36": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_11233.pdf_336_336_6_7_1_1": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0044454.pdf_236_236_17_17_46_46": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0043228.pdf_65_65_2_2_14_15_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0069400.pdf_39_39_39_39_37_37": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_45383.pdf_130_130_10_10_22_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0013156.pdf_94_94_18_18_27_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.ppat.1003922.pdf_988_988_13_13_22_22_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0034460.pdf_272_272_17_17_59_60": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_38444.pdf_717_717_11_12_24_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pgen.1000090.pdf_239_239_41_41_39_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_40984.pdf_118_118_33_33_18_20": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0062909.pdf_389_389_13_13_48_48_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0021417.pdf_759_759_0_1_4_5_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_40080.pdf_50_50_5_5_3_3_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0011895.pdf_370_370_13_13_32_32_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0016609.pdf_248_248_13_13_34_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0046739.pdf_485_485_2_2_16_16_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_46588.pdf_303_303_14_14_20_21": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0002672.pdf_723_723_1_1_27_27": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0047288.pdf_675_675_10_10_23_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0071258.pdf_243_243_3_3_9_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_gb-2004-5-8-r59.pdf_175_175_28_28_24_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0056821.pdf_256_256_51_51_10_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038917.pdf_535_535_4_4_34_34": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0068343.pdf_8_8_18_18_23_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0033765.pdf_173_173_37_37_23_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0077390.pdf_31_31_17_17_3_3_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0002252.pdf_800_800_1_1_23_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pgen.1003585.pdf_757_757_13_13_29_29_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0056734.pdf_228_228_19_19_16_16_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0033449.pdf_9_9_3_3_19_19": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0027854.pdf_255_255_23_23_4_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0092966.pdf_32_32_0_0_9_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0030246.pdf_525_525_1_1_47_47_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_103.pdf_233_233_30_30_19_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0052355.pdf_258_258_24_24_38_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0009197.pdf_409_409_20_20_28_29": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0101411.pdf_625_625_31_32_35_36_UNSUP": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0001936.pdf_179_179_30_30_3_3": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_19480.pdf_608_608_19_20_22_23_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0100734.pdf_434_434_22_22_33_33": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pgen.1002409.pdf_977_977_22_22_11_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0013422.pdf_323_323_23_24_29_29": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0104251.pdf_447_447_1_1_29_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0058382.pdf_163_163_37_37_35_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0040570.pdf_230_230_51_51_29_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0059733.pdf_849_849_29_29_22_23": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_SCPDFS_40840.pdf_36_36_6_6_43_43_UNSUP": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0054239.pdf_450_450_50_50_16_16": {
+   "is_correct": null,
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0043030.pdf_280_280_7_8_16_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0099962.pdf_670_670_10_10_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0019806.pdf_436_436_1_1_28_32_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0042362.pdf_326_326_13_13_28_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0019343.pdf_72_72_12_12_16_17": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0062860.pdf_481_481_5_5_20_20": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0089376.pdf_747_747_7_7_31_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SCPDFS_19238.pdf_526_526_6_6_7_8": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0089899.pdf_646_646_13_13_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0088924.pdf_465_465_7_7_39_39": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0032539.pdf_126_126_20_20_24_24": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0035783.pdf_695_695_4_4_34_35_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_GH_journal.pmed.1000329.pdf_388_388_4_4_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0080561.pdf_481_481_4_4_26_26_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0085594.pdf_304_304_44_44_22_22": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0060592.pdf_361_361_7_7_35_35": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_42318.pdf_258_258_33_33_19_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_39253.pdf_12_12_13_13_33_33_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0086824.pdf_247_247_1_1_30_31_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.ppat.1000747.pdf_358_358_10_10_2_2_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pcbi.0010063.pdf_404_404_67_67_92_92": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pbio.1000393.pdf_180_180_3_3_16_16": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0085926.pdf_629_629_4_4_24_25": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0062754.pdf_49_49_40_40_37_37_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pmed.1001054.pdf_209_209_15_15_17_17_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pntd.0002269.pdf_26_26_23_23_8_8_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0098660.pdf_491_491_5_5_26_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0041770.pdf_475_475_1_1_19_19_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pmed.0020308.pdf_223_223_16_16_19_20": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0038786.pdf_786_786_13_13_30_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0048235.pdf_351_351_20_20_7_7": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0053081.pdf_70_70_13_13_4_5": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0064145.pdf_46_46_39_39_23_24_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0072709.pdf_666_666_4_4_27_27_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pmed.0030498.pdf_53_53_46_46_33_33_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0068203.pdf_337_337_32_32_28_30_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0064966.pdf_213_213_4_4_37_37": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0038887.pdf_271_271_1_1_11_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0012633.pdf_420_420_6_6_16_17": {
+   "not": null,
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0005139.pdf_455_455_59_59_7_11": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0025079.pdf_508_508_13_13_10_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0093911.pdf_435_435_24_26_28_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_SCPDFS_27270.pdf_84_84_0_0_28_28_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pone.0051050.pdf_60_60_4_4_9_10": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.pbio.1000319.pdf_782_782_14_14_29_29": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_H_journal.pone.0078170.pdf_90_90_17_17_11_11_UNSUP": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_journal.ppat.1000364.pdf_650_650_13_13_31_31": {
+   "not": true
+  },
+  "RELATION_GENEHPOTERM_SUP_F_G_journal.pone.0040065.pdf_576_576_1_1_27_28_UNSUP": {
+   "not": true
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "key_columns": [
+  "relation_id"
+ ],
+ "by_key": {
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_368.pdf_382_382_2_2_6_6": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_46864.pdf_124_124_16_16_20_22": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0001870.pdf_615_615_30_30_33_37": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0014299.pdf_7_7_37_37_31_31": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_43524.pdf_677_677_22_22_29_30": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0036690.pdf_618_618_17_17_31_31": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_39036.pdf_322_322_1_1_10_11": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0055031.pdf_733_733_20_20_32_32": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0017220.pdf_484_484_6_6_4_4": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_20182.pdf_201_201_27_27_31_31": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_1271.pdf_803_803_18_18_1_2": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0076947.pdf_515_515_24_24_39_40": {
+   "is_correct": null,
+   "uncertain": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_12.pdf_437_437_3_3_1_1": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0019120.pdf_436_436_1_1_7_7": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0003581.pdf_275_275_18_18_26_28": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0045129.pdf_696_696_23_23_28_28": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0073522.pdf_4_4_21_21_10_11": {
+   "is_correct": true
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_journal.pone.0002722.pdf_86_86_4_4_12_12": {
+   "is_correct": false
+  },
+  "RELATION_GENEHPOTERM_SUP_MAP_SCPDFS_3553.pdf_48_48_5_5_8_8": {
+   "is_correct": true
+  }
+ }
+}
