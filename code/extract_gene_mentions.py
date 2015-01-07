@@ -138,10 +138,10 @@ def add_features(mention, sentence):
             if word2.lemma.isalpha() and re.search('^VB[A-Z]*$', word2.pos) \
                     and word2.lemma != 'be':
                 # Ignoring "be" comes from pharm (Emily)
-                p = sentence.get_word_dep_path(word.in_sent_idx,
-                                               word2.in_sent_idx)
-                if len(p) < minl:
-                    minl = len(p)
+                (p, l) = sentence.get_word_dep_path(
+                    word.in_sent_idx, word2.in_sent_idx)
+                if l < minl:
+                    minl = l
                     minp = p
                     minw = word2.lemma
     if minw:
@@ -153,7 +153,7 @@ def add_features(mention, sentence):
     for word in mention.words:
         for word2 in sentence.words:
             if word2.lemma in KEYWORDS:
-                p = sentence.get_word_dep_path(
+                (p, l) = sentence.get_word_dep_path(
                     word.in_sent_idx, word2.in_sent_idx)
                 kw = word2.lemma
                 if word2.lemma in KNOCK_KWS:
@@ -174,8 +174,8 @@ def add_features(mention, sentence):
                 #     kw = "_GENE"
                 # elif word2.lemma in COEXPRESSION_KWS:
                 #    ke = "_COEXPRESSION"
-                if len(p) < minl:
-                    minl = len(p)
+                if l < minl:
+                    minl = l
                     minp = p
                     minw = kw
                 if len(p) < 100:
@@ -193,10 +193,10 @@ def add_features(mention, sentence):
         for word2 in sentence.words:
             if word2.in_sent_idx not in mention.wordidxs and \
                     word2.word in merged_genes_dict:
-                p = sentence.get_word_dep_path(
+                (p, l) = sentence.get_word_dep_path(
                     word.in_sent_idx, word2.in_sent_idx)
-                if len(p) < minl:
-                    minl = len(p)
+                if l < minl:
+                    minl = l
                     minp = p
                     minw = word2.lemma
     if minw:

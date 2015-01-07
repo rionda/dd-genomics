@@ -142,14 +142,14 @@ def add_features(mention, sentence):
     for word in mention.words:
         for word2 in sentence.words:
             if word2.lemma in KEYWORDS:
-                p = sentence.get_word_dep_path(word.in_sent_idx,
-                                               word2.in_sent_idx)
+                (p, l) = sentence.get_word_dep_path(
+                    word.in_sent_idx, word2.in_sent_idx)
                 kw = word2.lemma
                 if word2.lemma in PATIENT_KWS:
                     kw = "_HUMAN"
                 mention.add_feature("KEYWORD_[" + kw + "]" + p)
-                if len(p) < minl:
-                    minl = len(p)
+                if l < minl:
+                    minl = l
                     minp = p
                     minw = kw
     # Special feature for the keyword on the shortest dependency path
@@ -164,10 +164,10 @@ def add_features(mention, sentence):
         for word2 in sentence.words:
             if word2.word.isalpha() and re.search('^VB[A-Z]*$', word2.pos) \
                     and word2.lemma != 'be':
-                p = sentence.get_word_dep_path(word.in_sent_idx,
-                                               word2.in_sent_idx)
-                if len(p) < minl:
-                    minl = len(p)
+                (p, l) = sentence.get_word_dep_path(
+                    word.in_sent_idx, word2.in_sent_idx)
+                if l < minl:
+                    minl = l
                     minp = p
                     minw = word2.lemma
         if minw:
