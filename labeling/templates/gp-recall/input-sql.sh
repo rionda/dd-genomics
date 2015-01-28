@@ -14,8 +14,7 @@ ids=${ids#,}
 
 # produce SQL query
 echo '
-\timing
-\set doc_id_to_sample ('"'$ids'"')
+\set doc_id_to_sample '"'($ids)'"'
 '"
 
 COPY (
